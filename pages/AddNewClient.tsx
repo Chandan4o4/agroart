@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ClientDetailForm() {
+export default function AddNewClientForm() {
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
@@ -13,14 +13,21 @@ export default function ClientDetailForm() {
               htmlFor="category"
               className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
-              Select Field
+              Select a Category
             </label>
-            <select name="category" id="category" required className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light">
-            <option value="" disabled defaultChecked>Choose an option</option>
-              <option value="landlord">Architects</option>
-              <option value="architecture">Builders</option>
-              <option value="sites">Contractors</option>
-              <option value="business">Direct</option>
+            <select
+              name="category"
+              id="category"
+              required
+              className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+            >
+              <option value="" selected disabled defaultValue={""}>
+                Select an option
+              </option>
+              <option value="architecture">Architects</option>
+              <option value="builders">Builders</option>
+              <option value="contractors">Contractors</option>
+              <option value="direct">Direct</option>
             </select>
           </div>
 
@@ -64,6 +71,36 @@ export default function ClientDetailForm() {
               <input
                 type="text"
                 id="area"
+                className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div className="grid md:grid-cols-2 md:gap-4">
+            <div>
+              <label
+                htmlFor="city"
+                className="block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
+                City
+              </label>
+              <input
+                type="text"
+                id="city"
+                className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                placeholder=""
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="state"
+                className="block mb-1 mt-4 md:mt-0 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >
+                State
+              </label>
+              <input
+                type="text"
+                id="state"
                 className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                 placeholder=""
               />

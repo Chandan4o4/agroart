@@ -1,5 +1,5 @@
 import React from 'react'
-import ClientDetailForm from './client-detail-form'
+import ClientDetailForm from './AddNewClient'
 
 export default function Home() {
   return (
