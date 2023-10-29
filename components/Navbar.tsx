@@ -6,8 +6,8 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Add New Client", href: "/", current: true },
-  { name: "Existing Clients", href: "/view", current: false },
+  { name: "Add New", href: "/", current: true },
+  { name: "View Data", href: "/view", current: false },
 ];
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
@@ -61,7 +61,7 @@ export default function Navbar() {
                           item.href === pathname
                             ? "bg-green-700 text-white"
                             : "text-black hover:bg-gray-400 hover:text-white",
-                          "rounded-md px-3 py-2 text-sm font-medium"
+                          "rounded-md px-3 py-2 text-sm font-medium border border-green-700"
                         )}
                         aria-current={
                           item.href === pathname ? "page" : undefined
